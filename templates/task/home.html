@@ -1,0 +1,27 @@
+{%extends "task/base.html"%}
+{%block child_block%}
+<div class="container">
+    <h1>Form Of View1</h1>
+  <form method="POST">
+    {%csrf_token%}
+
+  <div class="mb-3">
+    <label for="name" class="form-label"><b>Name</b></label>
+    <input type="text" class="form-control" id="name" name="Name">
+  </div>
+    {%if msg%}
+    <h3>{{msg}}</h3>
+    {%endif%}
+    <div class="mb-3">
+    <label for="url" class="form-label"><b>Url</b></label>
+    <input type="text" class="form-control" id="url" name="Url">
+  </div>
+    <div class="mb-3">
+    <label for="phonenumber" class="form-label"><b>Phonenumber</b></label>
+    <input type="text" class="form-control" id="phonenumber" name="Phonenumber">
+  </div>
+
+  <button type="submit" class="btn btn-primary bg-dark">Submit</button>
+</form>
+</div>
+    {%endblock%}

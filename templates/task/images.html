@@ -1,0 +1,28 @@
+{%extends "task/base.html"%}
+{%block child_block%}
+
+
+<form method="POST">
+    {%csrf_token%}
+    <div class="container">
+        <h1>GetImages Of View3</h1>
+        <div class="mb-3">
+    <label for="link" class="form-label"><b>Enter The Link</b></label>
+    <input type="text" class="form-control" id="link" name="url">
+  </div>
+    <button type="submit" class="bg-dark btn btn-primary">Getimages</button>
+
+    </div>
+
+</form>
+{%if imgurls%}
+<br>
+<div class="container">
+    <h3>The images in the link <a href="{{url}}">'{{url}}'</a> are: </h3><br>
+{%for img in imgurls%}
+<img src="{{img}}" height="300" width="300">
+{%endfor%}
+    </div>
+{%endif%}
+
+{%endblock%}
