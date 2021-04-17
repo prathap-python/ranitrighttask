@@ -123,3 +123,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     STATIC_DIR
 ]
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
