@@ -1,1 +1,1 @@
-web: gunicorn rankitrighttask.wsgi 
+web: gunicorn rankitrighttask.wsgi --log-file
